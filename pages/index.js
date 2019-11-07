@@ -1,12 +1,8 @@
 import Head from "next/head";
 
-import generateMap from "../lib/generate-map";
-
 import Map from "../components/map";
 
-const Index = ({ width, height, seed, threshold, cellSize }) => {
-  const map = generateMap({ width, height, seed, threshold });
-
+const Index = props => {
   return (
     <>
       <Head>
@@ -16,7 +12,7 @@ const Index = ({ width, height, seed, threshold, cellSize }) => {
         </title>
       </Head>
 
-      <Map map={map} cellSize={cellSize} />
+      <Map {...props} />
     </>
   );
 };

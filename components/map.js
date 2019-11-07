@@ -1,8 +1,9 @@
+import generateMap from "../lib/generate-map";
+
 import Cell from "./cell";
 
-export default ({ map, cellSize }) => {
-  const mapWidth = map.length;
-  const mapHeight = map[0].length;
+export default ({ width, height, seed, threshold, cellSize }) => {
+  const map = generateMap({ width, height, seed, threshold });
 
   return (
     <>
@@ -16,11 +17,11 @@ export default ({ map, cellSize }) => {
 
       <style jsx>{`
         div {
-          width: ${mapWidth * cellSize}px;
-          height: ${mapHeight * cellSize}px;
+          width: ${width * cellSize}px;
+          height: ${height * cellSize}px;
           display: grid;
-          grid-template-columns: repeat(${mapWidth}, 1fr);
-          grid-template-rows: repeat(${mapHeight}, 1fr);
+          grid-template-columns: repeat(${width}, 1fr);
+          grid-template-rows: repeat(${height}, 1fr);
         }
       `}</style>
     </>
