@@ -17,6 +17,15 @@ const Index = ({ map }) => (
   </>
 );
 
-Index.getInitialProps = () => ({ map: generateMap({ width: 10, height: 10 }) });
+Index.getInitialProps = async ({ query }) => {
+  const width = parseInt(query.width) || 10;
+  const height = parseInt(query.height) || 10;
+  const seed = query.seed;
+  const threshold = parseInt(query.threshold) || 47;
+
+  const map = generateMap({ width, height, seed, threshold });
+
+  return { map };
+};
 
 export default Index;
