@@ -1,6 +1,6 @@
 import Cell from "./cell";
 
-export default ({ map }) => {
+export default ({ map, cellSize }) => {
   const mapWidth = map.length;
   const mapHeight = map[0].length;
 
@@ -16,8 +16,8 @@ export default ({ map }) => {
 
       <style jsx>{`
         div {
-          width: ${mapWidth * 32}px;
-          height: ${mapHeight * 32}px;
+          width: ${mapWidth * cellSize}px;
+          height: ${mapHeight * cellSize}px;
           display: grid;
           grid-template-columns: repeat(${mapWidth}, 1fr);
           grid-template-rows: repeat(${mapHeight}, 1fr);
