@@ -3,6 +3,9 @@
   "version": "0.0.0",
   "description": "An exploration of two-dimensional arrays in JavaScript.",
   "scripts": {
+    "build": "next build",
+    "dev": "next",
+    "start": "next start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "engines": {
@@ -17,5 +20,10 @@
   "bugs": {
     "url": "https://github.com/benjaminkimball/cellular-automata/issues"
   },
-  "homepage": "https://github.com/benjaminkimball/cellular-automata#readme"
+  "homepage": "https://github.com/benjaminkimball/cellular-automata#readme",
+  "dependencies": {
+    "next": "^9.1.2",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0"
+  }
 }
