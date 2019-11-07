@@ -1,0 +1,21 @@
+{
+  "name": "cellular-automata",
+  "version": "0.0.0",
+  "description": "An exploration of two-dimensional arrays in JavaScript.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "10.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benjaminkimball/cellular-automata.git"
+  },
+  "author": "Benjamin Kimball <hello@benjaminkimball.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/benjaminkimball/cellular-automata/issues"
+  },
+  "homepage": "https://github.com/benjaminkimball/cellular-automata#readme"
+}
