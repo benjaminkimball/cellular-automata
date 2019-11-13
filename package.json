@@ -4,7 +4,7 @@
   "description": "An exploration of two-dimensional arrays in JavaScript.",
   "scripts": {
     "build": "parcel build src/index.html --out-dir docs --public-url /cellular-automata",
-    "format": "prettier --write src/**/*",
+    "format": "prettier --write 'src/**/*'",
     "lint": "eslint src/**/*.js",
     "publish": "rimraf docs && npm run lint && npm run build",
     "start": "parcel src/index.html"
