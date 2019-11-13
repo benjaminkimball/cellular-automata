@@ -8,8 +8,7 @@ export default function generateMap({ width, height, seed, threshold }) {
 
   return columns.map((_element, x) => {
     return rows.map((_element, y) => {
-      const isEdge =
-        x === 0 || x === width - 1 || (y === 0 || y === height - 1);
+      const isEdge = x === 0 || x === width - 1 || y === 0 || y === height - 1;
 
       if (isEdge) return 1;
 
@@ -18,4 +17,4 @@ export default function generateMap({ width, height, seed, threshold }) {
       return percentage <= threshold ? 1 : 0;
     });
   });
-};
+}
