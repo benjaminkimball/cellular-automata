@@ -1,6 +1,6 @@
 import seedrandom from "seedrandom";
 
-export default function generateMap({ width, height, seed, threshold }) {
+export default ({ width, height, seed, threshold }) => {
   const columns = [...Array(width).keys()];
   const rows = [...Array(height).keys()];
 
@@ -17,4 +17,4 @@ export default function generateMap({ width, height, seed, threshold }) {
       return percentage <= threshold ? 1 : 0;
     });
   });
-}
+};

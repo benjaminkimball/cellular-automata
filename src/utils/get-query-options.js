@@ -1,4 +1,4 @@
-export default function getQueryOptions() {
+export default () => {
   const { width, height, seed, threshold, cellSize } = window.location.search
     .substring(1)
     .split("&")
@@ -15,4 +15,4 @@ export default function getQueryOptions() {
     threshold: parseInt(threshold) || 47,
     cellSize: parseInt(cellSize) || 32
   };
-}
+};

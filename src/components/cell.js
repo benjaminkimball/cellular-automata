@@ -1,6 +1,6 @@
 import { h } from "preact";
 
-function Cell({ x, y, value }) {
+const Cell = ({ x, y, value }) => {
   return (
     <div
       style={{
@@ -10,6 +10,6 @@ function Cell({ x, y, value }) {
       }}
     />
   );
-}
+};
 
 export default Cell;

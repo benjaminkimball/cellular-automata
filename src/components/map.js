@@ -4,7 +4,7 @@ import generateMap from "../utils/generate-map";
 
 import Cell from "./cell";
 
-function Map({ width, height, seed, threshold, cellSize }) {
+const Map = ({ width, height, seed, threshold, cellSize }) => {
   const map = generateMap({ width, height, seed, threshold, cellSize });
 
   return (
@@ -24,6 +24,6 @@ function Map({ width, height, seed, threshold, cellSize }) {
       )}
     </div>
   );
-}
+};
 
 export default Map;
