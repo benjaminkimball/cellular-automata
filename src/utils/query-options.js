@@ -16,11 +16,11 @@ export default () => {
     }, {});
 
   return {
-    width: (parseInt(width) || 24) + 1,
-    height: (parseInt(height) || 24) + 1,
+    width: (parseInt(width) || 64) + 1,
+    height: (parseInt(height) || 64) + 1,
     seed: seed,
     threshold: parseInt(threshold) || 47,
-    cellSize: parseInt(cellSize) || 24,
+    cellSize: parseInt(cellSize) || 8,
     iterations: parseInt(iterations) || 5
   };
 };
