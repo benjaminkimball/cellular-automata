@@ -13,7 +13,7 @@ const Map = ({ width, height, seed, threshold, cellSize, iterations }) => {
 
   return (
     <div
-      className="map"
+      class="map"
       style={{
         width: `${width * cellSize}px`,
         height: `${height * cellSize}px`,
