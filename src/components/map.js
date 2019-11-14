@@ -5,9 +5,12 @@ import smoothMap from "../utils/smooth-map";
 
 import Cell from "./cell";
 
-const Map = ({ width, height, seed, threshold, cellSize }) => {
+const Map = ({ width, height, seed, threshold, cellSize, iterations }) => {
+  console.log(iterations);
+
   const map = smoothMap(
-    generateMap({ width, height, seed, threshold, cellSize })
+    generateMap({ width, height, seed, threshold, cellSize }),
+    iterations
   );
 
   return (

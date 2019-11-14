@@ -1,5 +1,12 @@
 export default () => {
-  const { width, height, seed, threshold, cellSize } = window.location.search
+  const {
+    width,
+    height,
+    seed,
+    threshold,
+    cellSize,
+    iterations
+  } = window.location.search
     .substring(1)
     .split("&")
     .reduce((accum, param) => {
@@ -13,6 +20,7 @@ export default () => {
     height: parseInt(height) || 64,
     seed: seed,
     threshold: parseInt(threshold) || 47,
-    cellSize: parseInt(cellSize) || 8
+    cellSize: parseInt(cellSize) || 8,
+    iterations: parseInt(iterations) || 5
   };
 };
