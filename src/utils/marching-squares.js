@@ -10,14 +10,12 @@ export default map => {
     if (!updatedMap[x]) updatedMap[x] = [];
 
     for (let y = 0; y < height - 1; y++) {
-      const bits = [
-        [map[x][y]],
-        [map[x + 1][y]],
-        [map[x][y + 1]],
-        [map[x + 1][y + 1]]
-      ].flat();
-
-      updatedMap[x][y] = parseInt(bits.join(""), 2);
+      updatedMap[x][y] = parseInt(
+        [[map[x][y]], [map[x + 1][y]], [map[x][y + 1]], [map[x + 1][y + 1]]]
+          .flat()
+          .join(""),
+        2
+      );
     }
   }
 

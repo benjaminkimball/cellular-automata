@@ -14,13 +14,20 @@ html {
 }
 
 body {
-  margin: 32px 0;
+  margin: 24px 0;
   background-color: var(--neutral500);
 }
 
 .map {
   display: grid;
   margin: 0 auto;
+}
+
+.cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
 }
 
 .is-filled {
