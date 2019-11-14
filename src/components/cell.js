@@ -15,13 +15,17 @@ const Cell = ({ x, y, value }) => {
 
     case 1: {
       return (
-        <div class="cell" style={{ backgroundColor: "#a89a88", ...position }} />
+        <svg viewBox="0 0 10 10" class="cell" style={{ ...position }}>
+          <polygon points="0,5 5,10 0,10" fill="#a89a88" />
+        </svg>
       );
     }
 
     case 2: {
       return (
-        <div class="cell" style={{ backgroundColor: "#bcb079", ...position }} />
+        <svg viewBox="0 0 10 10" class="cell" style={{ ...position }}>
+          <polygon points="10,5 5,10 10,10" fill="#bcb079" />
+        </svg>
       );
     }
 
