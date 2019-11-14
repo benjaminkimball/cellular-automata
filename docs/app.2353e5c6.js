@@ -43,4 +43,4 @@ var r=require("./lib/alea"),e=require("./lib/xor128"),i=require("./lib/xorwow"),
 },{}],"A2T1":[function(require,module,exports) {
 "use strict";var e=require("preact"),r=u(require("./components/map")),t=u(require("./utils/query-options"));function u(e){return e&&e.__esModule?e:{default:e}}var n=document.getElementById("root");(0,e.render)((0,e.h)(r.default,(0,t.default)()),n,n.lastChild);
 },{"preact":"aSor","./components/map":"Bepz","./utils/query-options":"gSvQ"}]},{},["A2T1"], null)
-//# sourceMappingURL=/cellular-automata/app.fb02c562.js.map
+//# sourceMappingURL=/cellular-automata/app.2353e5c6.js.map

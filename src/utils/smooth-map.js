@@ -3,7 +3,7 @@ import filledNeighborCount from "./filled-neighbor-count";
 export default function smoothMap(map, iterations = 5) {
   if (iterations === 0) return map;
 
-  const updateMap = map.map((rows, x) => {
+  const updatedMap = map.map((rows, x) => {
     return rows.map((value, y) => {
       const count = filledNeighborCount(map, x, y);
 
@@ -17,5 +17,5 @@ export default function smoothMap(map, iterations = 5) {
     });
   });
 
-  return smoothMap(updateMap, iterations - 1);
+  return smoothMap(updatedMap, iterations - 1);
 }

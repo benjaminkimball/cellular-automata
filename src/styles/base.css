@@ -1,7 +1,6 @@
 :root {
   --neutral500: #06142a;
   --dustStorm100: #f5ebe8;
-  --gainsboro500: #878484;
 }
 
 html {
@@ -27,7 +26,7 @@ body {
 .cell {
   width: 100%;
   height: 100%;
-  background-color: var(--gainsboro500);
+  background-color: var(--dustStorm100);
 }
 
 .is-partial {
