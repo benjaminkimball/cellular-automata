@@ -13,10 +13,10 @@ const Map = ({ width, height, seed, threshold, cellSize, iterations }) => {
 
   return (
     <div
+      className="map"
       style={{
         width: `${width * cellSize}px`,
         height: `${height * cellSize}px`,
-        display: "grid",
         gridTemplateColumns: `repeat(${width}, 1fr)`,
         gridTemplateRows: `repeat(${height}, 1fr)`
       }}

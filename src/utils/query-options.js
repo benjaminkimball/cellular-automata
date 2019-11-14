@@ -16,8 +16,8 @@ export default () => {
     }, {});
 
   return {
-    width: parseInt(width) || 64,
-    height: parseInt(height) || 64,
+    width: (parseInt(width) || 64) + 1,
+    height: (parseInt(height) || 64) + 1,
     seed: seed,
     threshold: parseInt(threshold) || 47,
     cellSize: parseInt(cellSize) || 8,
