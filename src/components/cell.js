@@ -8,109 +8,183 @@ const Cell = ({ x, y, value }) => {
 
   switch (value) {
     case 0: {
-      return (
-        <div class="cell" style={{ backgroundColor: "#878484", ...position }} />
-      );
+      return <div class="cell" style={{ ...position }} />;
     }
 
     case 1: {
       return (
-        <svg viewBox="0 0 10 10" class="cell" style={{ ...position }}>
-          <polygon points="0,5 5,10 0,10" fill="#a89a88" />
+        <svg
+          viewBox="0 0 10 10"
+          class="cell is-partial"
+          style={{ ...position }}
+        >
+          <polygon points="0,5 5,10 0,10" />
         </svg>
       );
     }
 
     case 2: {
       return (
-        <svg viewBox="0 0 10 10" class="cell" style={{ ...position }}>
-          <polygon points="10,5 5,10 10,10" fill="#bcb079" />
+        <svg
+          viewBox="0 0 10 10"
+          class="cell is-partial"
+          style={{ ...position }}
+        >
+          <polygon points="10,5 5,10 10,10" />
         </svg>
       );
     }
 
     case 3: {
       return (
-        <div class="cell" style={{ backgroundColor: "#a1bc79", ...position }} />
+        <svg
+          viewBox="0 0 10 10"
+          class="cell is-partial"
+          style={{ ...position }}
+        >
+          <polygon points="0,5 10,5 10,10 0,10" />
+        </svg>
       );
     }
 
     case 4: {
       return (
-        <div class="cell" style={{ backgroundColor: "#54817b", ...position }} />
+        <svg
+          viewBox="0 0 10 10"
+          class="cell is-partial"
+          style={{ ...position }}
+        >
+          <polygon points="5,0 10,0 10,5" />
+        </svg>
       );
     }
 
     case 5: {
       return (
-        <div class="cell" style={{ backgroundColor: "#5e999d", ...position }} />
+        <svg
+          viewBox="0 0 10 10"
+          class="cell is-partial"
+          style={{ ...position }}
+        >
+          <polygon points="5,0 10,0 10,5 5,10 0,10 0,5" />
+        </svg>
       );
     }
 
     case 6: {
       return (
-        <div class="cell" style={{ backgroundColor: "#647c91", ...position }} />
+        <svg
+          viewBox="0 0 10 10"
+          class="cell is-partial"
+          style={{ ...position }}
+        >
+          <polygon points="5,0 10,0 10,10 5,10" />
+        </svg>
       );
     }
 
     case 7: {
       return (
-        <div class="cell" style={{ backgroundColor: "#585e87", ...position }} />
+        <svg
+          viewBox="0 0 10 10"
+          class="cell is-partial"
+          style={{ ...position }}
+        >
+          <polygon points="5,0 10,0 10,10 0,10 0,5" />
+        </svg>
       );
     }
 
     case 8: {
       return (
-        <div class="cell" style={{ backgroundColor: "#a077a6", ...position }} />
+        <svg
+          viewBox="0 0 10 10"
+          class="cell is-partial"
+          style={{ ...position }}
+        >
+          <polygon points="0,0 5,0 0,5" />
+        </svg>
       );
     }
 
     case 9: {
       return (
-        <div class="cell" style={{ backgroundColor: "#a6777f", ...position }} />
+        <svg
+          viewBox="0 0 10 10"
+          class="cell is-partial"
+          style={{ ...position }}
+        >
+          <polygon points="0,0 5,0 5,10 0,10" />
+        </svg>
       );
     }
 
     case 10: {
       return (
-        <div class="cell" style={{ backgroundColor: "#b5988c", ...position }} />
+        <svg
+          viewBox="0 0 10 10"
+          class="cell is-partial"
+          style={{ ...position }}
+        >
+          <polygon points="0,0 5,0 10,5 10,10 5,10 0,5" />
+        </svg>
       );
     }
 
     case 11: {
       return (
-        <div class="cell" style={{ backgroundColor: "#d9a380", ...position }} />
+        <svg
+          viewBox="0 0 10 10"
+          class="cell is-partial"
+          style={{ ...position }}
+        >
+          <polygon points="0,0 5,0 10,5 10,10 0,10" />
+        </svg>
       );
     }
 
     case 12: {
       return (
-        <div class="cell" style={{ backgroundColor: "#00bb8b", ...position }} />
+        <svg
+          viewBox="0 0 10 10"
+          class="cell is-partial"
+          style={{ ...position }}
+        >
+          <polygon points="0,0 10,0 10,5 0,5" />
+        </svg>
       );
     }
 
     case 13: {
       return (
-        <div class="cell" style={{ backgroundColor: "#ffab00", ...position }} />
+        <svg
+          viewBox="0 0 10 10"
+          class="cell is-partial"
+          style={{ ...position }}
+        >
+          <polygon points="0,0 10,0 10,5 5,10 0,10" />
+        </svg>
       );
     }
 
     case 14: {
       return (
-        <div class="cell" style={{ backgroundColor: "#cf2f34", ...position }} />
+        <svg
+          viewBox="0 0 10 10"
+          class="cell is-partial"
+          style={{ ...position }}
+        >
+          <polygon points="0,0 10,0 10,10 5,10 0,5" />
+        </svg>
       );
     }
 
     case 15: {
-      return (
-        <div class="cell" style={{ backgroundColor: "#06142a", ...position }} />
-      );
+      return <div class="cell is-filled" style={{ ...position }} />;
     }
 
     default: {
-      return (
-        <div class="cell" style={{ backgroundColor: "#878484", ...position }} />
-      );
+      return <div class="cell" style={{ ...position }} />;
     }
   }
 };

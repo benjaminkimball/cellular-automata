@@ -1,2 +1,0 @@
-:root{--neutral500:#06142a;--dustStorm100:#f5ebe8}html{box-sizing:border-box}*,:after,:before{box-sizing:inherit}body{margin:24px 0;background-color:var(--neutral500)}.map{display:grid;margin:0 auto}.cell{display:flex;align-items:center;justify-content:center;color:#fff}.is-filled{background-color:var(--neutral500)}.is-open{background-color:var(--dustStorm100)}
-/*# sourceMappingURL=/cellular-automata/base.a9176c0a.css.map */
