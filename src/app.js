@@ -1,9 +1,9 @@
 import { h, render } from "preact";
 
 import Map from "./components/map";
-import getQueryOptions from "./utils/get-query-options";
+import queryOptions from "./utils/query-options";
 
-const App = () => <Map {...getQueryOptions()} />;
+const App = () => <Map {...queryOptions()} />;
 
 const rootEl = document.getElementById("root");
 

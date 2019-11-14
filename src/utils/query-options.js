@@ -9,10 +9,10 @@ export default () => {
     }, {});
 
   return {
-    width: parseInt(width) || 10,
-    height: parseInt(height) || 10,
+    width: parseInt(width) || 64,
+    height: parseInt(height) || 64,
     seed: seed,
     threshold: parseInt(threshold) || 47,
-    cellSize: parseInt(cellSize) || 32
+    cellSize: parseInt(cellSize) || 8
   };
 };

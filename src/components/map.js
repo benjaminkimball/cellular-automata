@@ -1,11 +1,14 @@
 import { h } from "preact";
 
 import generateMap from "../utils/generate-map";
+import smoothMap from "../utils/smooth-map";
 
 import Cell from "./cell";
 
 const Map = ({ width, height, seed, threshold, cellSize }) => {
-  const map = generateMap({ width, height, seed, threshold, cellSize });
+  const map = smoothMap(
+    generateMap({ width, height, seed, threshold, cellSize })
+  );
 
   return (
     <div
