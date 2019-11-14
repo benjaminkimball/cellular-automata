@@ -1,15 +1,15 @@
 import { h } from "preact";
 
 import generateMap from "../utils/generate-map";
+import marchingSquares from "../utils/marching-squares";
 import smoothMap from "../utils/smooth-map";
 
 import Cell from "./cell";
 
 const Map = ({ width, height, seed, threshold, cellSize, iterations }) => {
-  const map = smoothMap(
-    generateMap({ width, height, seed, threshold, cellSize }),
-    iterations
-  );
+  const initial = generateMap({ width, height, seed, threshold, cellSize });
+  const smoothed = smoothMap(initial, iterations);
+  const map = marchingSquares(smoothed);
 
   return (
     <div
