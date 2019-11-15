@@ -6,8 +6,8 @@ export default ({ width, height, seed, threshold }) => {
 
   const rng = seedrandom(seed);
 
-  return columns.map((_element, x) => {
-    return rows.map((_element, y) => {
+  return columns.map((_element, x) =>
+    rows.map((_element, y) => {
       const isEdge = x === 0 || x === width - 1 || y === 0 || y === height - 1;
 
       if (isEdge) return 1;
@@ -15,6 +15,6 @@ export default ({ width, height, seed, threshold }) => {
       const percentage = Math.floor(rng() * (100 + 1));
 
       return percentage <= threshold ? 1 : 0;
-    });
-  });
+    })
+  );
 };

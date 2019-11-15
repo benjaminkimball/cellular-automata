@@ -1,26 +1,22 @@
 /* eslint-disable security/detect-object-injection */
 
 export default map => {
-  const width = map.length;
-  const height = map[0].length;
+  const width = map.length - 1;
+  const height = map[0].length - 1;
 
-  const updatedMap = [];
+  const columns = [...Array(width).keys()];
+  const rows = [...Array(height).keys()];
 
-  for (let x = 0; x < width - 1; x++) {
-    if (!updatedMap[x]) updatedMap[x] = [];
-
-    for (let y = 0; y < height - 1; y++) {
-      updatedMap[x][y] = [
+  return columns.map((_element, x) =>
+    rows.map((_element, y) => {
+      const bits = [
         [map[x][y]],
         [map[x + 1][y]],
         [map[x + 1][y + 1]],
         [map[x][y + 1]]
-      ]
-        .flat()
-        .map((bit, i, { length }) => bit << (length - 1 - i))
-        .reduce((accum, n) => accum | n);
-    }
-  }
+      ].flat();
 
-  return updatedMap;
+      return parseInt(bits.join(""), 2);
+    })
+  );
 };

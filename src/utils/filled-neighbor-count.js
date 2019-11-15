@@ -4,17 +4,16 @@ export default (map, cellX, cellY) => {
   const width = map.length;
   const height = map[0].length;
 
-  let count = 0;
+  const offsets = [-1, 0, 1];
+  const neighbors = offsets
+    .map(x => offsets.map(y => [cellX + x, cellY + y]))
+    .flat();
 
-  for (let x = cellX - 1; x <= cellX + 1; x++) {
-    for (let y = cellY - 1; y <= cellY + 1; y++) {
-      if (x >= 0 && x < width && y >= 0 && y < height) {
-        if (x !== cellX || y !== cellY) count += map[x][y];
-      } else {
-        count++;
-      }
+  return neighbors.reduce((accum, [x, y]) => {
+    if (x >= 0 && x < width && y >= 0 && y < height) {
+      return x !== cellX || y !== cellY ? accum + map[x][y] : accum;
+    } else {
+      return accum + 1;
     }
-  }
-
-  return count;
+  }, 0);
 };
