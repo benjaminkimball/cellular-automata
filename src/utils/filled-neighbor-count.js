@@ -11,7 +11,7 @@ export default (map, cellX, cellY) => {
 
   return neighbors.reduce((accum, [x, y]) => {
     if (x >= 0 && x < width && y >= 0 && y < height) {
-      return x !== cellX || y !== cellY ? accum + map[x][y] : accum;
+      return x === cellX || y === cellY ? accum : accum + map[x][y];
     } else {
       return accum + 1;
     }
