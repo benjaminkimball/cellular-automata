@@ -18,7 +18,7 @@ export default () => {
   return {
     width: (parseInt(width) || 64) + 1,
     height: (parseInt(height) || 64) + 1,
-    seed: seed,
+    seed: seed || Date.now(),
     threshold: parseInt(threshold) || 47,
     cellSize: parseInt(cellSize) || 8,
     iterations: parseInt(iterations) || 5

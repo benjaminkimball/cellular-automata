@@ -1,10 +1,10 @@
-import seedrandom from "seedrandom";
+import { alea } from "seedrandom";
 
 export default ({ width, height, seed, threshold }) => {
   const columns = [...Array(width).keys()];
   const rows = [...Array(height).keys()];
 
-  const rng = seedrandom(seed);
+  const rng = alea(seed);
 
   return columns.map((_element, x) =>
     rows.map((_element, y) => {
