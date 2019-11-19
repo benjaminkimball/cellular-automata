@@ -1,10 +1,10 @@
-import { alea } from "seedrandom";
+import seedrandom from "seedrandom";
 
 export default ({ width, height, seed, threshold }) => {
   const columns = [...Array(width).keys()];
   const rows = [...Array(height).keys()];
 
-  const rng = alea(seed);
+  const random = seedrandom(seed);
 
   return columns.map((_element, x) =>
     rows.map((_element, y) => {
@@ -12,7 +12,7 @@ export default ({ width, height, seed, threshold }) => {
 
       if (isEdge) return 1;
 
-      const percentage = Math.floor(rng() * (100 + 1));
+      const percentage = Math.floor(random() * (100 + 1));
 
       return percentage <= threshold ? 1 : 0;
     })

@@ -17,5 +17,5 @@ export default function smoothMap(map, iterations = 5) {
     })
   );
 
-  return smoothMap(updatedMap, iterations - 1);
+  return smoothMap(updatedMap, --iterations);
 }

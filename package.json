@@ -6,7 +6,7 @@
     "build": "parcel build src/index.html --out-dir docs --public-url /cellular-automata",
     "format": "prettier --write 'src/**/*'",
     "lint": "npm run lint:scripts && npm run lint:styles",
-    "lint:scripts": "eslint src/**/*.js",
+    "lint:scripts": "eslint 'src/**/*.js'",
     "lint:styles": "stylelint 'src/**/*.css'",
     "publish": "rimraf docs && npm run lint && npm run build",
     "start": "parcel src/index.html"
