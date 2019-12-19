@@ -1,5 +1,3 @@
-/* eslint-disable security/detect-object-injection */
-
 export default (map, cellX, cellY) => {
   const width = map.length;
   const height = map[0].length;

@@ -3,7 +3,8 @@
     "standard",
     "standard-jsx",
     "plugin:prettier/recommended",
-    "plugin:security/recommended"
+    "plugin:security/recommended",
+    "prettier/standard"
   ],
   "parser": "babel-eslint",
   "plugins": ["prettier", "security"],

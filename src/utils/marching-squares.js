@@ -1,5 +1,3 @@
-/* eslint-disable security/detect-object-injection */
-
 export default map => {
   const width = map.length - 1;
   const height = map[0].length - 1;
