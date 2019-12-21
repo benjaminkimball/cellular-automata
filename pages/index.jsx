@@ -1,35 +1,43 @@
-import React from "react";
+import React, { useContext, useEffect, useRef } from "react";
+import { ThemeContext } from "styled-components";
 
 import generateMap from "../lib/generate-map";
+import getDrawFunction from "../lib/get-draw-function";
 import marchingSquares from "../lib/marching-squares";
 import smoothMap from "../lib/smooth-map";
+import queryOptions from "../lib/query-options";
 
-const IndexPage = ({
-  width,
-  height,
-  seed,
-  threshold,
-  cellSize,
-  iterations
-}) => {
+import Map from "../components/map";
+
+const IndexPage = ({ width, height, cellSize, map }) => {
+  const canvasEl = useRef(null);
+  const theme = useContext(ThemeContext);
+
+  useEffect(() => {
+    const ctx = canvasEl.current.getContext("2d");
+    ctx.fillStyle = theme.neutral500;
+
+    map.forEach((rows, x) =>
+      rows.forEach((value, y) =>
+        getDrawFunction({ x, y, value, cellSize, ctx })()
+      )
+    );
+  }, [map, cellSize, theme]);
+
+  return (
+    <Map ref={canvasEl} width={width} height={height} cellSize={cellSize} />
+  );
+};
+
+IndexPage.getInitialProps = async ({ query }) => {
+  const { width, height, seed, threshold, cellSize, iterations } = queryOptions(
+    query
+  );
   const initial = generateMap({ width, height, seed, threshold, cellSize });
   const smoothed = smoothMap(initial, iterations);
   const map = marchingSquares(smoothed);
 
-  return <pre>{JSON.stringify(map, null, 2)}</pre>;
-};
-
-IndexPage.getInitialProps = async ({ query }) => {
-  const { width, height, seed, threshold, cellSize, iterations } = query;
-
-  return {
-    width: (parseInt(width) || 64) + 1,
-    height: (parseInt(height) || 64) + 1,
-    seed: seed,
-    threshold: parseInt(threshold) || 47,
-    cellSize: parseInt(cellSize) || 8,
-    iterations: parseInt(iterations) || 5
-  };
+  return { width, height, cellSize, map };
 };
 
 export default IndexPage;
