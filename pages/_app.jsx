@@ -1,8 +1,13 @@
 import React from "react";
 import App from "next/app";
 
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle, ThemeProvider } from "styled-components";
 import { Normalize } from "styled-normalize";
+
+const theme = {
+  neutral500: "#06142a",
+  dustStorm100: "#f5ebe8"
+};
 
 const BaseStyles = createGlobalStyle`
   html {
@@ -16,8 +21,8 @@ const BaseStyles = createGlobalStyle`
   }
 
   body {
-    background-color: #06142a;
-    color: #f5ebe8;
+    background-color: ${({ theme }) => theme.neutral500};
+    color: ${({ theme }) => theme.dustStorm100};
   }
 `;
 
@@ -26,11 +31,11 @@ export default class BaseApp extends App {
     const { Component, pageProps } = this.props;
 
     return (
-      <>
+      <ThemeProvider theme={theme}>
         <Normalize />
         <BaseStyles />
         <Component {...pageProps} />
-      </>
+      </ThemeProvider>
     );
   }
 }
