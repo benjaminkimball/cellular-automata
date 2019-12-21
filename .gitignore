@@ -1,3 +1,2 @@
-.cache/
-dist/
+.next/
 node_modules/

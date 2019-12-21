@@ -3,13 +3,16 @@
   "version": "3.0.0",
   "description": "An exploration of two-dimensional arrays in JavaScript.",
   "scripts": {
-    "build": "parcel build src/index.html --out-dir docs --public-url /cellular-automata",
-    "format": "prettier --write 'src/**/*'",
+    "dev": "next",
+    "build": "next build",
+    "format": "prettier --write '{components,lib,pages}/**/*'",
     "lint": "npm run lint:scripts && npm run lint:styles",
-    "lint:scripts": "eslint 'src/**/*.js'",
-    "lint:styles": "stylelint 'src/**/*.css'",
-    "publish": "rimraf docs && npm run lint && npm run build",
-    "start": "parcel src/index.html"
+    "lint:scripts": "eslint '{components,lib,pages}/**/*.{js,jsx}'",
+    "lint:styles": "stylelint '{components,pages}/**/*.{js,jsx}'",
+    "start": "next start"
+  },
+  "engines": {
+    "node": "12.x"
   },
   "repository": {
     "type": "git",
@@ -22,26 +25,31 @@
   },
   "homepage": "https://github.com/benjaminkimball/cellular-automata#readme",
   "dependencies": {
-    "preact": "^10.1.1",
-    "seedrandom": "^3.0.5"
+    "next": "^9.1.6",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "seedrandom": "^3.0.5",
+    "styled-components": "^4.4.1",
+    "styled-normalize": "^8.0.6"
   },
   "devDependencies": {
-    "babel-eslint": "^10.0.3",
-    "eslint": "^6.7.2",
+    "babel-plugin-styled-components": "^1.10.6",
+    "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.7.0",
     "eslint-config-standard": "^14.1.0",
-    "eslint-config-standard-jsx": "^8.1.0",
+    "eslint-config-standard-react": "^9.2.0",
     "eslint-plugin-import": "^2.19.1",
     "eslint-plugin-node": "^10.0.0",
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-react-hooks": "^2.3.0",
     "eslint-plugin-security": "^1.4.0",
     "eslint-plugin-standard": "^4.0.1",
-    "parcel-bundler": "^1.12.4",
     "prettier": "^1.19.1",
-    "rimraf": "^3.0.0",
     "stylelint": "^12.0.0",
-    "stylelint-config-standard": "^19.0.0"
+    "stylelint-config-standard": "^19.0.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.9.0"
   }
 }
