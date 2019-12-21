@@ -1,8 +1,23 @@
 import React from "react";
 
-import Map from "../components/map";
+import generateMap from "../lib/generate-map";
+import marchingSquares from "../lib/marching-squares";
+import smoothMap from "../lib/smooth-map";
 
-const IndexPage = props => <Map {...props} />;
+const IndexPage = ({
+  width,
+  height,
+  seed,
+  threshold,
+  cellSize,
+  iterations
+}) => {
+  const initial = generateMap({ width, height, seed, threshold, cellSize });
+  const smoothed = smoothMap(initial, iterations);
+  const map = marchingSquares(smoothed);
+
+  return <pre>{JSON.stringify(map, null, 2)}</pre>;
+};
 
 IndexPage.getInitialProps = async ({ query }) => {
   const { width, height, seed, threshold, cellSize, iterations } = query;
