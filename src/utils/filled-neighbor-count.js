@@ -4,7 +4,7 @@ export default (map, cellX, cellY) => {
 
   const offsets = [-1, 0, 1];
   const neighbors = offsets
-    .map(x => offsets.map(y => [cellX + x, cellY + y]))
+    .map((x) => offsets.map((y) => [cellX + x, cellY + y]))
     .flat();
 
   return neighbors.reduce((accum, [x, y]) => {

@@ -18,7 +18,7 @@ const Map = ({ width, height, seed, threshold, cellSize, iterations }) => {
         width: `${width * cellSize}px`,
         height: `${height * cellSize}px`,
         gridTemplateColumns: `repeat(${width}, 1fr)`,
-        gridTemplateRows: `repeat(${height}, 1fr)`
+        gridTemplateRows: `repeat(${height}, 1fr)`,
       }}
     >
       {map.map((rows, x) =>

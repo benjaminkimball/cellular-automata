@@ -5,7 +5,7 @@ export default () => {
     seed,
     threshold,
     cellSize,
-    iterations
+    iterations,
   } = window.location.search
     .substring(1)
     .split("&")
@@ -21,6 +21,6 @@ export default () => {
     seed: seed,
     threshold: parseInt(threshold) || 47,
     cellSize: parseInt(cellSize) || 8,
-    iterations: parseInt(iterations) || 5
+    iterations: parseInt(iterations) || 5,
   };
 };

@@ -3,7 +3,7 @@ import { h } from "preact";
 const Cell = ({ x, y, value }) => {
   const position = {
     gridColumnStart: x + 1,
-    gridRowStart: y + 1
+    gridRowStart: y + 1,
   };
 
   switch (value) {

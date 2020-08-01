@@ -1,4 +1,4 @@
-export default map => {
+export default (map) => {
   const width = map.length - 1;
   const height = map[0].length - 1;
 
@@ -11,7 +11,7 @@ export default map => {
         [map[x][y]],
         [map[x + 1][y]],
         [map[x + 1][y + 1]],
-        [map[x][y + 1]]
+        [map[x][y + 1]],
       ].flat();
 
       return parseInt(bits.join(""), 2);
